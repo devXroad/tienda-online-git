@@ -1,134 +1,135 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UrbanStyle — Experiencia Store</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALIENT · experiencia atlántica</title>
+  <!-- GSAP y ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
 
-<header>
+  <header id="main-header">
+    <div class="logo">
+      <i class="fas fa-water"></i> VALIENT <span>brands</span>
+    </div>
     <nav>
-        <a class="logo" href="#">Urban<span>Style</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="baniadores.html">Bañadores</a></li>
-            <li><a href="zapatillas.html">Zapatillas</a></li>
-            <li><a href="chandal.html">Chándals</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html" id="nav-inicio" class="active">INICIO</a></li>
+        <li><a href="baniadores.html" id="nav-baniadores">BAÑADORES</a></li>
+        <li><a href="zapatillas.html" id="nav-zapatillas">ZAPATILLAS</a></li>
+        <li><a href="chandal.html" id="nav-chandal">CHÁNDALS</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<!-- HERO CINEMÁTICO -->
-<section class="hero-cinematic">
-    <video autoplay muted loop class="hero-video">
-        <source src="videos/hero.mp4" type="video/mp4">
-    </video>
-    <div class="hero-content">
-        <h1 class="hero-title">Viste diferente.</h1>
-        <p>Moda urbana premium con experiencia interactiva.</p>
-        <button class="btn">Explorar colección</button>
+  <main>
+    <!-- SOLO CONTENIDO DE INICIO -->
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="https://www.pexels.com/es-es/download/video/9168354/" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+      <div class="hero-mask"></div>
+      <div class="container" style="width:100%; position:relative; z-index:5;">
+        <h1 class="hero-title">
+          <div class="line"><span>ESENCIA</span></div>
+          <div class="line"><span>VALIENTE</span></div>
+        </h1>
+        <p class="hero-sub">el océano como estudio</p>
+      </div>
+      <div class="scroll-indicator">
+        <span>DESCUBRIR</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <div class="parallax-text" id="parallax1">ATLANTIC</div>
+
+    <div class="container">
+      <div class="section">
+        <div class="section-header">
+          <span class="section-eyebrow">— arquitectura textil</span>
+          <h2 class="section-title">diseño para el movimiento</h2>
+        </div>
+        <div class="grid-experience">
+          <div class="exp-card" data-gsap="reveal">
+            <div class="exp-icon"><i class="fas fa-droplet"></i></div>
+            <h3>Hidrofilia</h3>
+            <p>Tejidos que dialogan con el agua. Investigación en polímeros de origen marino.</p>
+          </div>
+          <div class="exp-card" data-gsap="reveal">
+            <div class="exp-icon"><i class="fas fa-feather"></i></div>
+            <h3>Ligereza</h3>
+            <p>Estructuras alveolares inspiradas en la morfología de las olas.</p>
+          </div>
+          <div class="exp-card" data-gsap="reveal">
+            <div class="exp-icon"><i class="fas fa-infinity"></i></div>
+            <h3>Ciclicidad</h3>
+            <p>Programa de reincorporación de prendas al ciclo biológico.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
 
-<!-- CATEGORÍAS -->
-<section class="categories">
-    <h2>Categorías Populares</h2>
-    <div class="grid">
-        <div class="card reveal float">
-            <img src="https://images.unsplash.com/photo-1571902942602-441b63976038?w=600" alt="Bañadores">
-            <div class="card-content">
-                <h3>Bañadores</h3>
-            </div>
+    <div style="background: #ece7e0; padding: 120px 0; margin: 100px 0; transform: skewY(-1deg);">
+      <div class="container" style="transform: skewY(1deg);">
+        <div style="display: flex; gap: 60px; align-items: center;">
+          <div style="flex:1; font-size: 3rem; color: #2b4f5c;"><i class="fas fa-compass"></i></div>
+          <div style="flex:3;">
+            <h3 style="font-size: 3rem; font-weight: 600; margin-bottom: 20px; letter-spacing: -0.02em;">4 direcciones</h3>
+            <p style="font-size: 1.4rem; font-weight: 300;">Una colección que atraviesa latitudes. Tejido, construcción y resistencia pensados desde la costa atlántica.</p>
+          </div>
         </div>
-        <div class="card reveal">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Zapatillas">
-            <div class="card-content">
-                <h3>Zapatillas</h3>
-            </div>
-        </div>
-        <div class="card reveal float">
-            <img src="https://images.unsplash.com/photo-1604147495798-57beb5d6af73?w=600" alt="Chándals">
-            <div class="card-content">
-                <h3>Chándals</h3>
-            </div>
-        </div>
+      </div>
     </div>
-</section>
+  </main>
 
-<!-- PRODUCTOS DESTACADOS -->
-<section class="featured">
-    <h2>Productos Destacados</h2>
-    <div class="grid">
-        <div class="card reveal">
-            <img src="https://images.unsplash.com/photo-1571902942602-441b63976038?w=600" alt="Bañador Clásico">
-            <div class="card-content">
-                <h3>Bañador Clásico</h3>
-                <p class="price">29.99€</p>
-                <button class="btn">Añadir</button>
-            </div>
+  <footer>
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; margin-bottom: 80px;">
+      <div>
+        <div class="logo" style="color: #eae3db; margin-bottom: 20px;">
+          <i class="fas fa-water"></i> VALIENT <span style="color:#a4815f;">brands</span>
         </div>
-        <div class="card reveal">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Zapatillas Urban">
-            <div class="card-content">
-                <h3>Zapatillas Urban</h3>
-                <p class="price">79.99€</p>
-                <button class="btn">Añadir</button>
-            </div>
+        <p style="font-weight: 300; line-height: 1.6;">El océano es nuestro único referente. Cada prenda es una pieza de una conversación atlántica.</p>
+      </div>
+      <div>
+        <h5 style="font-size: 1rem; letter-spacing: 3px; margin-bottom: 30px;">CATEGORÍAS</h5>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 15px;"><a href="baniadores.html" style="color: #eae3db; text-decoration: none; font-weight: 300;">BAÑADORES</a></li>
+          <li style="margin-bottom: 15px;"><a href="zapatillas.html" style="color: #eae3db; text-decoration: none;">ZAPATILLAS</a></li>
+          <li style="margin-bottom: 15px;"><a href="chandal.html" style="color: #eae3db; text-decoration: none;">CHÁNDALS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="font-size: 1rem; letter-spacing: 3px; margin-bottom: 30px;">ESTUDIO</h5>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 15px;"><a href="#" style="color: #eae3db; text-decoration: none;">MANIFIESTO</a></li>
+          <li style="margin-bottom: 15px;"><a href="#" style="color: #eae3db; text-decoration: none;">TRAZABILIDAD</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="font-size: 1rem; letter-spacing: 3px; margin-bottom: 30px;">NEWSLETTER</h5>
+        <div style="display: flex; border-bottom: 1px solid #a4815f;">
+          <input type="email" placeholder="email" style="background: transparent; border: none; padding: 12px 0; width:100%; color:white; outline: none;">
+          <i class="fas fa-arrow-right" style="color:#a4815f;"></i>
         </div>
-        <div class="card reveal">
-            <img src="https://images.unsplash.com/photo-1604147495798-57beb5d6af73?w=600" alt="Chándal Premium">
-            <div class="card-content">
-                <h3>Chándal Premium</h3>
-                <p class="price">59.99€</p>
-                <button class="btn">Añadir</button>
-            </div>
-        </div>
+      </div>
     </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2024 UrbanStyle — Experiencia Store
-</footer>
-
-<!-- JavaScript integrado -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Hero cinematic animations
-    gsap.to('.hero-title', { y:0, opacity:1, duration:1.2, delay:0.3 });
-    gsap.to('.hero-content p', { y:0, opacity:1, duration:1.2, delay:0.6 });
-
-    // Scroll reveal para cards
-    gsap.utils.toArray('.reveal').forEach(el => {
-        gsap.to(el, {
-            scrollTrigger: el,
-            opacity: 1,
-            y: 0,
-            duration: 1
-        });
-    });
-
-    // Efecto tilt en cards
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.transform = `rotateX(${(y-150)/20}deg) rotateY(${-(x-150)/20}deg) scale(1.05)`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
-        });
-    });
-</script>
-
+    <div style="display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
+      <span>© 2026 VALIENT — UNA EXPERIENCIA ATLÁNTICA</span>
+      <span><i class="fab fa-instagram" style="margin-left: 20px;"></i><i class="fab fa-twitter" style="margin-left: 15px;"></i></span>
+    </div>
+  </footer>
 </body>
 </html>
