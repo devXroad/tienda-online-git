@@ -1,67 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Zapatillas</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script src='main.js'></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chándals – Tienda Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Tu CSS general -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- GSAP + ScrollTrigger + Lenis (necesarios para tu JS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 </head>
+
 <body>
+
+    <!-- Cursor personalizado -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
     <!-- ============================
-     HEADER COMÚN
-============================= -->
-<header>
-    <h1>Tienda de Ropa</h1>
-    <nav>
-        <a href="zapatillas.html">Zapatillas</a> |
-        <a href="banadores.html">Bañadores</a> |
-        <a href="chandals.html">Chándals</a>
-    </nav>
-</header>
+         HEADER
+    ============================= -->
+    <header id="main-header">
+        <div class="logo">
+            <i class="fa-solid fa-shirt"></i> Tienda <span>Online</span>
+        </div>
 
-<!-- ============================
-     CONTENIDO PRINCIPAL
-============================= -->
-<main>
-    <h2>Zapatillas</h2>
+        <nav>
+            <ul>
+                <li><a id="nav-inicio" href="index.html">Inicio</a></li>
+                <li><a id="nav-baniadores" href="baniadores.html">Bañadores</a></li>
+                <li><a id="nav-zapatillas" href="zapatillas.html">Zapatillas</a></li>
+                <li><a id="nav-chandal" class="active" href="chandal.html">Chándals</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="grid-productos">
+    <!-- ============================
+         CONTENIDO DE LA PÁGINA CHÁNDALS
+    ============================= -->
+    <div id="page-chandal" class="page-content active-page">
 
-        <!-- Producto 1 -->
-        <article class="producto">
-            <img src="img/zapatilla1.jpg" alt="Zapatillas deportivas AirRun" width="100%">
-            <h3>Zapatillas AirRun Pro</h3>
-            <p>Zapatillas deportivas ligeras y transpirables, ideales para running y entrenamiento diario.</p>
-            <p class="precio">59.99€</p>
-        </article>
+        <!-- Banner cinematográfico -->
+        <section class="page-banner">
+            <h1 class="banner-title">Chándals</h1>
+            <i class="fa-solid fa-person-running banner-icon"></i>
+        </section>
 
-        <!-- Producto 2 -->
-        <article class="producto">
-            <img src="img/zapatilla2.jpg" alt="Zapatillas urbanas StreetStyle" width="100%">
-            <h3>Zapatillas StreetStyle Urban</h3>
-            <p>Diseño moderno y cómodo para el día a día. Perfectas para un look casual y urbano.</p>
-            <p class="precio">69.99€</p>
-        </article>
+        <div class="container">
 
-        <!-- Producto 3 -->
-        <article class="producto">
-            <img src="img/zapatilla3.jpg" alt="Zapatillas deportivas MaxComfort" width="100%">
-            <h3>Zapatillas MaxComfort</h3>
-            <p>Máxima amortiguación y suela antideslizante para mayor estabilidad y confort.</p>
-            <p class="precio">79.99€</p>
-        </article>
+            <div class="section-header">
+                <span class="section-eyebrow">Colección 2026</span>
+                <h2 class="section-title">Comodidad, estilo y rendimiento</h2>
+            </div>
 
-    </section>
-</main>
+            <!-- GRID DE PRODUCTOS CON EFECTO 3D -->
+            <section class="showcase-3d">
 
-<!-- ============================
-     FOOTER COMÚN
-============================= -->
-<footer>
-    <p>© 2026 Tienda de Ropa - Proyecto GitHub</p>
-</footer>
-    
+                <!-- Producto 1 -->
+                <article class="tilt-card" data-tilt>
+                    <img src="img/chandal1.jpg" alt="Chándal térmico gris" width="100%">
+                    <h3>Chándal Térmico Gris Boreal</h3>
+                    <p>Tejido térmico ligero que mantiene el calor sin perder transpirabilidad.</p>
+                    <p class="price">42.90€</p>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="tilt-card" data-tilt>
+                    <img src="img/chandal2.jpg" alt="Pantalón deportivo azul marino" width="100%">
+                    <h3>Pantalón Deportivo Azul Marino</h3>
+                    <p>Tejido flexible y cómodo para entrenar o vestir a diario.</p>
+                    <p class="price">24.50€</p>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="tilt-card" data-tilt>
+                    <img src="img/chandal3.jpg" alt="Sudadera deportiva negra" width="100%">
+                    <h3>Sudadera Activa Negra Eclipse</h3>
+                    <p>Interior suave y capucha ajustable para entrenamientos suaves o uso urbano.</p>
+                    <p class="price">28.95€</p>
+                </article>
+
+                <!-- Producto 4 -->
+                <article class="tilt-card" data-tilt>
+                    <img src="img/chandal4.jpg" alt="Chándal bicolor rojo y gris" width="100%">
+                    <h3>Chándal Bicolor Rojo Titan</h3>
+                    <p>Diseño moderno y tejido resistente para uso intensivo.</p>
+                    <p class="price">47.80€</p>
+                </article>
+
+                <!-- Producto 5 -->
+                <article class="tilt-card" data-tilt>
+                    <img src="img/chandal5.jpg" alt="Sudadera verde con capucha" width="100%">
+                    <h3>Sudadera Verde Botella</h3>
+                    <p>Tejido cálido y suave con bolsillo canguro y capucha.</p>
+                    <p class="price">31.20€</p>
+                </article>
+
+            </section>
+        </div>
+    </div>
+
+    <!-- ============================
+         FOOTER
+    ============================= -->
+    <footer>
+        <p>© 2026 Tienda de Ropa - Proyecto GitHub</p>
+    </footer>
+
+    <!-- Tu JS general -->
+    <script src="JavaScript/script.js"></script>
+
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/4c8b5a1c2f.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
